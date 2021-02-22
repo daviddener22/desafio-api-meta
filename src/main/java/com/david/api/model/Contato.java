@@ -9,11 +9,14 @@ public class Contato {
 
 	@Id
 	private String id;
-
+	
+	@NotEmpty(message = "Nome não pode ser vazio")
 	private String nome;
 
+	@NotEmpty(message = "Canal não pode ser vazio")
 	private String canal;
 	
+	@NotEmpty(message = "Valor do Canal não pode ser vazio")
 	private String valor;
 	
 	private String obs;
@@ -29,7 +32,6 @@ public class Contato {
 		this.id = id;
 	}
 
-	@NotEmpty(message = "Nome não pode ser vazio")
 	public String getNome() {
 		return nome;
 	}
@@ -38,7 +40,6 @@ public class Contato {
 		this.nome = nome;
 	}
 
-	@NotEmpty(message = "Canal não pode ser vazio")
 	public String getCanal() {
 		return canal;
 	}
@@ -47,7 +48,6 @@ public class Contato {
 		this.canal = canal;
 	}
 
-	@NotEmpty(message = "Valor do Canal não pode ser vazio")
 	public String getValor() {
 		return valor;
 	}
